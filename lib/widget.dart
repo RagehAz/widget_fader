@@ -116,6 +116,8 @@ class _AnimatedFadeState extends State<_AnimatedFade> with SingleTickerProviderS
       reverseCurve: widget.curve,
     );
 
+    _animate();
+
   }
   // --------------------
   @override
@@ -165,8 +167,6 @@ class _AnimatedFadeState extends State<_AnimatedFade> with SingleTickerProviderS
   // -----------------------------------------------------------------------------
   @override
   Widget build(BuildContext context) {
-
-    _animate();
 
     return IgnorePointer(
         ignoring: widget.ignorePointer,
