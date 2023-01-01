@@ -9,9 +9,9 @@ enum FadeType{
   stillAtMax,
 }
 
-class FuckingFader extends StatelessWidget {
+class WidgetFader extends StatelessWidget {
   /// --------------------------------------------------------------------------
-  const FuckingFader({
+  const WidgetFader({
     @required this.fadeType,
     this.child,
     this.max = 1,
