@@ -1,3 +1,5 @@
-## 0.0.1
+### 0.0.1
+* Separated from bldrs_app package
 
-* TODO: Describe initial release.
+### 0.0.3
+* Bug fixes

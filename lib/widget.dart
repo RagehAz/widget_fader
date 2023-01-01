@@ -9,9 +9,9 @@ enum FadeType{
   stillAtMax,
 }
 
-class WidgetFader extends StatelessWidget {
+class FuckingFader extends StatelessWidget {
   /// --------------------------------------------------------------------------
-  const WidgetFader({
+  const FuckingFader({
     @required this.fadeType,
     this.child,
     this.max = 1,
@@ -125,6 +125,22 @@ class _AnimatedFadeState extends State<_AnimatedFade> with SingleTickerProviderS
     _animationController.dispose();
     _animation.dispose();
     super.dispose();
+  }
+  // --------------------
+  @override
+  void didUpdateWidget(covariant _AnimatedFade oldWidget) {
+    if (
+    oldWidget.fadeType  != widget.fadeType  ||
+        oldWidget.duration  != widget.duration  ||
+        oldWidget.curve     != widget.curve     ||
+        oldWidget.max       != widget.max       ||
+        oldWidget.min       != widget.min
+    ){
+      setState(() {
+        _animate();
+      });
+    }
+    super.didUpdateWidget(oldWidget);
   }
   // -----------------------------------------------------------------------------
   Future<void> _animate() async {
