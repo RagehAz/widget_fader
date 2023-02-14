@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of widget_fader;
 
 enum FadeType{
   fadeIn,
